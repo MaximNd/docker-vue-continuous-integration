@@ -1,10 +1,13 @@
 sudo: required
 language: node_js
+
 services:
   - docker
 
 before_install:
   - docker build -t maximnd/docker-vue-continuous-integration -f Dockerfile.dev .
+
+install: true
 
 script:
   - docker run maximnd/docker-vue-continuous-integration npm run test:unit
