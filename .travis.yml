@@ -11,3 +11,12 @@ install: true
 
 script:
   - docker run maximnd/docker-vue-continuous-integration npm run test:unit
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: FKTZZW1mH83hQck0cE/9ozBrysMN42OZB7iXwFmyRIUGL/gw25gh4OKm4U51y0u8W/j5Qk950ogNSZspUWWan21u1/tsTRbKIsWed/aCh6705gKV6tznYMXliyrFXa/DD9RJaqAibAIPkOKcWwiDJXceoc0MITIg2gggykWElbldp3hd47gEJd64kVccgGYvC07qajD1hc4lTJqz9H3RuZl+tVFut3C4wNRivIgZligPm9ZOORo99bNUvpqEEMnMbZXcSZZS/CHjcgeBijjoBR2PFYfggpPM1+mcFfV1PK1YPtLVK/PDN+TuVSW0f9MgbblpTP6vxdZM3QmCkbc+kySVImaGm3VIhJHjFRkV3x6b9c5ApzU02PEuea0xbq7mTTsDnzlleYl/8dL5EUSAz/ROiQ08zcLUiXX8uhvN+gAJI/6QbqtyBwlFpRD9q/yseJjW1LEAyt31UuWxTly6dDbRF25hyu0N9mgAlXtdMjmXfFTnFuD9I+byLKBo7Ziahk4kq2reAfiUa6+nIJJJeDbFoe/RjrSC5K47H0mhTUAQeuTX1n6t0dz48DLBesg6+EMPwzUB9FwR03A5VFc/Q9qD7Hd6cIO+iHtLN9W2m1NWnQu9iO4XZADTFVbCjlCvL72ViwFqhC/5in/xgAXNwe024J5Vy30ZIPh7Gk5z11A=
+  app: docker-vue-ci
+  on:
+    repo: MaximNd/docker-vue-continuous-integration
+    branch: master
