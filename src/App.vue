@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     HALLO!!!!!!!
+    new text for feature branch
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
   </div>
